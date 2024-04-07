@@ -1,8 +1,7 @@
 function wordleFeedback(guess, correctWord) {
   const feedback = [];
-  const usedLetters = {}; // Håller reda på använda bokstäver i det korrekta ordet
+  const usedLetters = {}; 
 
-  // Första passet för att markera rätt bokstäver och räkna korrekt placerade bokstäver
   for (let i = 0; i < correctWord.length; i++) {
       usedLetters[correctWord[i]] = (usedLetters[correctWord[i]] || 0) + 1;
       if (guess[i] === correctWord[i]) {
@@ -13,7 +12,6 @@ function wordleFeedback(guess, correctWord) {
       }
   }
 
-  // Andra passet för att uppdatera felplacerade och felaktiga bokstäver
   feedback.forEach((item, index) => {
       if (item.result === 'pending') {
           if (correctWord.includes(item.letter) && usedLetters[item.letter] > 0) {
