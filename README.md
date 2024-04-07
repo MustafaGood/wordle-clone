@@ -17,5 +17,4 @@ Projektet använder enkla manuella tester för att verifiera funktionaliteten ho
 Bidra
 Om du vill bidra till projektet, vänligen följ standardpraxis för pull requests och öppna gärna issues för eventuella förslag eller rapporterade buggar.
 
-Licens
-Det här projektet är licensierat under MIT-licensen - se LICENSE.md för detaljer.
+ 
