@@ -7,7 +7,6 @@ function testWordleFeedback() {
     { guess: 'KLAPP', correctWord: 'CYKLA', expected: 'some correct, some incorrect' },
     { guess: 'LYKTA', correctWord: 'CYKLA', expected: 'some misplaced, some correct' },
     { guess: 'ALYCK', correctWord: 'CYKLA', expected: 'some misplaced, one incorrect' },
-    // Lägg till fler testfall här om du vill ha mer heltäckande tester
   ];
 
   testCases.forEach(testCase => {
