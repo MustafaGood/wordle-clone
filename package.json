@@ -1,0 +1,12 @@
+{
+    "name": "wordle-clone",
+    "version": "1.0.0",
+    "description": "A Wordle game clone",
+    "main": "wordleFeedback.js",
+    "scripts": {
+      "test": "node wordleFeedback.test.js"
+    },
+    "author": "Ditt Namn",
+    "license": "MIT"
+  }
+  
