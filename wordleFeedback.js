@@ -1,30 +1,31 @@
 function wordleFeedback(guess, correctWord) {
-    const feedback = [];
-    const correctPositions = new Array(correctWord.length).fill(false);
+  const feedback = [];
+  const usedLetters = {}; // Håller reda på använda bokstäver i det korrekta ordet
 
-    guess.split('').forEach((letter, index) => {
-        if (index < correctWord.length && letter === correctWord.charAt(index)) {
-            feedback.push({ letter, result: 'correct' });
-            correctPositions[index] = true;
-        } else {
-            feedback.push({ letter, result: null });
-        }
-    });
+  // Första passet för att markera rätt bokstäver och räkna korrekt placerade bokstäver
+  for (let i = 0; i < correctWord.length; i++) {
+      usedLetters[correctWord[i]] = (usedLetters[correctWord[i]] || 0) + 1;
+      if (guess[i] === correctWord[i]) {
+          feedback.push({ letter: guess[i], result: 'correct' });
+          usedLetters[correctWord[i]] -= 1;
+      } else {
+          feedback.push({ letter: guess[i], result: 'pending' });
+      }
+  }
 
-    feedback.forEach((item, index) => {
-        if (item.result === null) {
-            const letter = item.letter;
-            const foundIndex = correctWord.indexOf(letter);
-            if (foundIndex >= 0 && !correctPositions[foundIndex]) {
-                correctPositions[foundIndex] = true;
-                item.result = 'misplaced';
-            } else {
-                item.result = 'incorrect';
-            }
-        }
-    });
+  // Andra passet för att uppdatera felplacerade och felaktiga bokstäver
+  feedback.forEach((item, index) => {
+      if (item.result === 'pending') {
+          if (correctWord.includes(item.letter) && usedLetters[item.letter] > 0) {
+              feedback[index].result = 'misplaced';
+              usedLetters[item.letter] -= 1;
+          } else {
+              feedback[index].result = 'incorrect';
+          }
+      }
+  });
 
-    return feedback;
+  return feedback;
 }
 
 module.exports = wordleFeedback;
