@@ -8,15 +8,9 @@ Klona repositoryn till din lokala maskin: git clone https://github.com/MustafaGo
 Navigera till projektets rotmapp: cd wordle-clone
 Installera nödvändiga beroenden: npm install
 Användning
-För att köra spelet, använd följande kommando:
+För att köra spelet, använd följande kommando:node wordleFeedback.js
+För att köra testerna, kör:npm test
 
-Copy code
-node wordleFeedback.js
-För att köra testerna, kör:
-
-bash
-Copy code
-npm test
 Test
 Projektet använder enkla manuella tester för att verifiera funktionaliteten hos ordgissningsalgoritmen. Testerna definieras i wordleFeedback.test.js.
 
