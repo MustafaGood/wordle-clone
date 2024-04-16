@@ -1,20 +1,13 @@
-Wordle Clone
+# Wordle Klon:
 Detta är en enkel klon av det populära ordgissningsspelet Wordle.
+## Installation:
+För att installera och köra projektet lokalt, följ dessa steg:
 
-Installation
-För att sätta upp projektet lokalt, följ dessa steg:
-
-Klona repositoryn till din lokala maskin: git clone https://github.com/MustafaGood/wordle-clone.git
-Navigera till projektets rotmapp: cd wordle-clone
-Installera nödvändiga beroenden: npm install
-Användning
-För att köra spelet, använd följande kommando:node wordleFeedback.js
-För att köra testerna, kör:npm test
-
-Test
-Projektet använder enkla manuella tester för att verifiera funktionaliteten hos ordgissningsalgoritmen. Testerna definieras i wordleFeedback.test.js.
-
-Bidra
-Om du vill bidra till projektet, vänligen följ standardpraxis för pull requests och öppna gärna issues för eventuella förslag eller rapporterade buggar.
-
- 
+1. Klona projektet till din lokala maskin: `git clone https://github.com/MustafaGood/wordle-clone.git`
+2. Navigera till projektets rotmapp: `cd wordle-clone`
+3. Installera de nödvändiga beroendena: `npm install`
+## Användning:
+För att köra spelet, använd följande kommando: `node wordleFeedback.js`
+För att köra testerna, använd: `npm test`
+## Testning
+Projektet använder enkla manuella tester för att verifiera funktionaliteten hos ordgissningsalgoritmen. Testerna definieras i `wordleFeedback.test.js`
