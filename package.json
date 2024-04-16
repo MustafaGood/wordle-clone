@@ -4,9 +4,11 @@
     "description": "A Wordle game clone",
     "main": "wordleFeedback.js",
     "scripts": {
-      "test": "node wordleFeedback.test.js"
+        "test": "jest"
     },
     "author": "Mustafa Al-jashaami",
-    "license": "MIT"
-  }
-  
+    "license": "MIT",
+    "devDependencies": {
+        "jest": "^29.7.0"
+    }
+}
